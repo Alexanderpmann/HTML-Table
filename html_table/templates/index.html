@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<!-- removed hard-coded elements from first attempt -->
+<!-- simplified coded by not adding additional tables -> learnt from Michael Choin in Checkerboard video -->
+<body>
+    <div class="container">
+    <table class="table table-hover table-dark table-striped"> <!--dark colored table with blue table head font, yellow/orange table body font - dark bg w/hover feature - also centered in screen as well as data-->
+        <thead align="center" class="text-primary">
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Full Name</th>
+            </tr>
+        </thead>
+        <tbody align="center" class="text-warning">
+            {% for user in user: %}
+            <tr>
+                <td>{{user['first_name']}}</td>
+                <td>{{user['last_name']}}</td>
+                <td>{{user['full_name']}}</td>
+            </tr>
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
